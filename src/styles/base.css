@@ -25,5 +25,8 @@ img {
     user-drag: none;         /* 표준 속성: 지원하는 브라우저에서 이미지 드래그 방지 */
 }
 
-
+/* 이 요소 내에서 스크롤 바를 숨기고 스크롤을 막습니다 */
+.hide-scroll {
+    overflow: hidden;
+}
 
