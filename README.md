@@ -12,6 +12,10 @@
     3. 데이터베이스 (DBMS)
        MySQL
         - 버전: 8.0.40
+## 개발환경
+   - IDE: WebStorm
+   - languages: javascript, html, css
+   - DBMS: MySQL
 ---
 ## Guide Line
 
