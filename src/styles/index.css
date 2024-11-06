@@ -9,7 +9,8 @@
 
 /* gameboy-item에 대한 중앙정렬 */
 .gameboy-item {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     justify-content: center; /* 가로 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     height: 100vh; /* 뷰포트 전체 높이 */
@@ -122,4 +123,33 @@
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
     }
+}
+
+/* 버튼 스타일 및 위치 설정 */
+.overlay-button {
+    position: absolute;
+    top: 58.3%; /* 이미지의 세로 중앙 */
+    left: 54.76%; /* 이미지의 가로 중앙 */
+    transform: translate(-1%, -50%); /* 중앙 정렬 */
+    width: 23px; /* 버튼의 가로 길이 */
+    height: 23px; /* 버튼의 세로 길이, width 와 같게 설정 */
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.1);  /*반투명 배경 */
+    color: #be2878;
+    border: none;
+    border-radius: 50%; /* 원형으로 만듦 */
+    cursor: pointer;
+    display: inline-block; /* 버튼처럼 표시 */
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+}
+.overlay-button a {
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+
+/* 버튼 호버 효과 */
+.overlay-button:hover {
+    background-color: rgb(171, 36, 108);
 }
