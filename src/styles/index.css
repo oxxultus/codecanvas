@@ -128,33 +128,43 @@
     position: relative;
     width: 300px;
     height: 500px; /* 화면 전체 높이 */
-    border: solid #eee7e7;
+    /* border: solid #eee7e7;  해당 영역의 크기 알기위한 코드 */
     overflow: hidden; /* 자식 요소가 부모 영역을 벗어나지 않도록 함 */
 }
 /* 버튼 스타일 및 위치 설정 */
-.overlay-button {
+.button {
     position: absolute;
-    top: 69.9%; /* 부모 요소의 세로 중앙 */
-    left: 69.1%; /* 부모 요소의 가로 중앙 */
-    transform: translate(-50%, -50%);
-    width: 29.2px; /* 버튼 크기 */
-    height: 29.2px; /* 버튼 크기 */
-    font-size: 2vw; /* 화면 크기에 비례한 텍스트 크기 */
-    border-radius: 50%; /* 원형으로 만듦 */
-    display: inline-block; /* 버튼처럼 표시 */
-    border: none;
+    top: 65.8%; /* 부모 요소의 세로 중앙 */
+    left: 62.4%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #be2878;
+    --main-color: #881f56;
+    width: 32px; /* 버튼 크기 */
+    height: 32px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 0px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 25px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0);  /*반투명 배경 */
-    color: #be2878;
 }
-.overlay-button a {
+.button a {
     position: absolute;
     display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
     width: 100%; /* 버튼 크기 꽉 채우기 */
     height: 100%; /* 버튼 크기 꽉 채우기 */
 }
 
-/* 버튼 호버 효과 */
-.overlay-button:hover {
-    background-color: rgb(191, 38, 121);
+.button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
 }
