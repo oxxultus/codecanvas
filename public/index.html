@@ -2,8 +2,10 @@
 <html lang="ko" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset ="utf-8">
-  <link rel="stylesheet" href="/src/styles/base.css"> <!-- CSS 파일 연결 -->
-  <link rel="stylesheet" href="/src/styles/index.css"> <!-- CSS 파일 연결 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/base.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="/src/styles/index.css"> <!-- CSS 파일 연결 -->
+    <script src="../src/scripts/function.js"></script>
   <title></title>
 </head>
 <body class="background hide-scroll">
@@ -11,12 +13,12 @@
 
 <div class="console-item bounce-in-top">
     <div class="console-img">
-        <div class="terminal-img-frame">
-            <img class="terminal-img" src="/src/images/study.gif" alt="">
+        <div class="display-img-frame">
+            <img id="display-img" src="/src/images/indi-game.gif" alt="">
         </div>
       <img src="../src/images/console.png" alt="console" height="300" oncontextmenu="return false;">
         <button class="home-button" onclick="window.location.href='test.html'"></button>
-        <button class="plus-button" onclick="window.location.href='test.html'"></button>
+        <button class="plus-button" onclick="changeImage()"></button>
     </div>
 </div>
 
