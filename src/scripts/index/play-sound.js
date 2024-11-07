@@ -50,6 +50,8 @@ function playSoundButton() {
 // 버튼 2의 소리 재생 후 페이지 이동
 function playHomeButtonSound() {
     const sound = document.getElementById("click-home-button-sound");
+    const defaultDelay = 0.2; // 소리 무음 시 기본 지연 시간 (초)
+
     if (isSoundOn) {  // 소리가 켜져 있을 때만 재생
         if (!sound.paused && !sound.ended) {
             sound.pause(); // 현재 소리 멈추기
@@ -57,9 +59,14 @@ function playHomeButtonSound() {
         }
         sound.play(); // 새 소리 재생
 
-        // 소리가 끝날 때까지 기다린 후 페이지 이동
+        // 소리 재생 시간 또는 기본 지연 시간 후 페이지 이동
         setTimeout(function() {
             window.location.href = 'index.html'; // 소리 재생 후 페이지 이동
-        }, sound.duration * 1000); // sound.duration은 소리의 길이 (초 단위)
+        }, (sound.duration || defaultDelay) * 1000);
+    } else {
+        // 소리가 꺼져있을 때 기본 지연 시간 후 페이지 이동
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, defaultDelay * 1000);
     }
 }

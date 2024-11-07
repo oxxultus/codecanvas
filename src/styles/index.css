@@ -284,8 +284,8 @@
 }
 #home-button-icon {
     position: absolute;
-    top: 17%; /* 부모 요소의 세로 중앙 */
-    left: 18.18%; /* 부모 요소의 가로 중앙 */
+    top: 16%; /* 부모 요소의 세로 중앙 */
+    left: 19.6%; /* 부모 요소의 가로 중앙 */
     width: 18px;
     height: 18px;
 }
