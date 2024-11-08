@@ -140,7 +140,7 @@ body {
     position: relative;
     width: 750px;
     height: 460px; /* 화면 전체 높이 */
-     border: solid #eee7e7;
+    /*border: solid #eee7e7;*/
     overflow: hidden; /* 자식 요소가 부모 영역을 벗어나지 않도록 함 */
 }
 #console_img{
@@ -193,7 +193,7 @@ body {
 #home-button-icon {
     position: absolute;
     top: 11%; /* 부모 요소의 세로 중앙 */
-    left: 14.4%; /* 부모 요소의 가로 중앙 */
+    left: 13.2%; /* 부모 요소의 가로 중앙 */
     width: 28px;
     height: 28px;
 }
@@ -276,7 +276,7 @@ body {
 #left-big-button {
     position: absolute;
     top: 21.85%; /* 부모 요소의 세로 중앙 */
-    left: 7.75%; /* 부모 요소의 가로 중앙 */
+    left: 7.7%; /* 부모 요소의 가로 중앙 */
     --bg-color: #fbfbfb;
     --main-color: #010101;
     width: 60px; /* 버튼 크기 */
@@ -335,6 +335,7 @@ body {
     align-items: center;
     transition: all 0.3s;
     cursor: pointer;
+    z-index: 2;
 }
 #right-big-button a {
     position: absolute;
@@ -493,4 +494,54 @@ body {
     left: 16.4%; /* 부모 요소의 가로 중앙 */
     width: 23px;
     height: 23px;
+}
+.loader {
+    top: 42%; /* 부모 요소의 세로 중앙 */
+    left: 48%; /* 부모 요소의 가로 중앙 */
+    position: absolute;
+    align-items: center;
+    display: none;
+    z-index: 3;
+}
+.bar {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+    animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+    20% {
+        background-color: #ffff;
+        transform: scaleY(1.5);
+    }
+
+    40% {
+        transform: scaleY(1);
+    }
+}
+#loader-text {
+    position: absolute;
+    top: 60%; /* 부모 요소의 세로 */
+    left: 40%; /* 부모 요소의 가로 */
+    display: none;
+    color: lightgray;
+
+    font-size: 16px; /* 폰트 크기 */
+    font-family: "JetBrains Mono-Regular";
+    text-align: center; /* 텍스트 정렬 (기본값: left) */
+    line-height: 1.5; /* 줄 간격 */
+    letter-spacing: 1px; /* 문자 간격 */
 }
