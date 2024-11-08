@@ -63,113 +63,9 @@
         animation-timing-function: ease-out;
     }
 }
-@keyframes bounce-in-top {
-    0% {
-        -webkit-transform: translateY(-500px);
-        transform: translateY(-500px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    38% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        opacity: 1;
-    }
-    55% {
-        -webkit-transform: translateY(-65px);
-        transform: translateY(-65px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    72% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-    81% {
-        -webkit-transform: translateY(-28px);
-        transform: translateY(-28px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    90% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-    95% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-}
 .bounce-top:hover {
     -webkit-animation: bounce-top 0.9s both;
     animation: bounce-top 0.9s both;
-}
-@-webkit-keyframes bounce-top {
-    0% {
-        -webkit-transform: translateY(-45px);
-        transform: translateY(-45px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    24% {
-        opacity: 1;
-    }
-    40% {
-        -webkit-transform: translateY(-24px);
-        transform: translateY(-24px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    65% {
-        -webkit-transform: translateY(-12px);
-        transform: translateY(-12px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    82% {
-        -webkit-transform: translateY(-6px);
-        transform: translateY(-6px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    93% {
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-    25%,
-    55%,
-    75%,
-    87% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-    100% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        opacity: 1;
-    }
 }
 @keyframes bounce-top {
     0% {
@@ -223,7 +119,7 @@
         opacity: 1;
     }
 }
-/* console-item에 대한 중앙정렬 */
+/* console-item 에 대한 중앙정렬 */
 .console-item {
     min-width: 503px; /* 원하는 최소 너비 */
     min-height: 300px; /* 원하는 최소 높이 */
@@ -243,7 +139,7 @@
 }
 .display-img-frame {
     position: absolute;
-    top: 28.2%; /* 부모 요소의 세로 중앙 */
+    top: 27.7%; /* 부모 요소의 세로 중앙 */
     left: 25.2%; /* 부모 요소의 가로 중앙 */
 }
 
@@ -284,8 +180,8 @@
 }
 #home-button-icon {
     position: absolute;
-    top: 17%; /* 부모 요소의 세로 중앙 */
-    left: 18.18%; /* 부모 요소의 가로 중앙 */
+    top: 16%; /* 부모 요소의 세로 중앙 */
+    left: 19.6%; /* 부모 요소의 가로 중앙 */
     width: 18px;
     height: 18px;
 }
@@ -437,10 +333,84 @@
     box-shadow: 0px 0px var(--main-color);
     transform: translate(1px, 1px);
 }
+/* y-button 스타일 및 위치 설정 */
+#y-button {
+    position: absolute;
+    top: 36.5%; /* 부모 요소의 세로 중앙 */
+    left: 82.3%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #dddede;
+    --main-color: #010101;
+    width: 20px; /* 버튼 크기 */
+    height: 20px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#y-button a {
+    position: absolute;
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+#y-button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
+}
+#y-icon {
+    position: absolute;
+    top: 13%; /* 부모 요소의 세로 중앙 */
+    left: 12%; /* 부모 요소의 가로 중앙 */
+    width: 14px;
+    height: 14px;
+}
+/* x-button 스타일 및 위치 설정 */
+#x-button {
+    position: absolute;
+    top: 43%; /* 부모 요소의 세로 중앙 */
+    left: 78.6%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #dddede;
+    --main-color: #010101;
+    width: 20px; /* 버튼 크기 */
+    height: 20px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#x-button a {
+    position: absolute;
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+#x-button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
+}
+#x-icon {
+    position: absolute;
+    top: 12.7%; /* 부모 요소의 세로 중앙 */
+    left: 12%; /* 부모 요소의 가로 중앙 */
+    width: 14px;
+    height: 14px;
+}
 /* a-button 스타일 및 위치 설정 */
 #a-button {
     position: absolute;
-    top: 36.5%; /* 부모 요소의 세로 중앙 */
+    top: 49.3%; /* 부모 요소의 세로 중앙 */
     left: 82.3%; /* 부모 요소의 가로 중앙 */
     --bg-color: #dddede;
     --main-color: #010101;
@@ -470,7 +440,7 @@
 #a-icon {
     position: absolute;
     top: 13%; /* 부모 요소의 세로 중앙 */
-    left: 13.9%; /* 부모 요소의 가로 중앙 */
+    left: 13.7%; /* 부모 요소의 가로 중앙 */
     width: 14px;
     height: 14px;
 }
@@ -478,7 +448,7 @@
 #b-button {
     position: absolute;
     top: 43%; /* 부모 요소의 세로 중앙 */
-    left: 78.6%; /* 부모 요소의 가로 중앙 */
+    left: 86.1%; /* 부모 요소의 가로 중앙 */
     --bg-color: #dddede;
     --main-color: #010101;
     width: 20px; /* 버튼 크기 */
@@ -507,81 +477,7 @@
 #b-icon {
     position: absolute;
     top: 13%; /* 부모 요소의 세로 중앙 */
-    left: 14%; /* 부모 요소의 가로 중앙 */
-    width: 14px;
-    height: 14px;
-}
-/* c-button 스타일 및 위치 설정 */
-#c-button {
-    position: absolute;
-    top: 49.3%; /* 부모 요소의 세로 중앙 */
-    left: 82.3%; /* 부모 요소의 가로 중앙 */
-    --bg-color: #dddede;
-    --main-color: #010101;
-    width: 20px; /* 버튼 크기 */
-    height: 20px; /* 버튼 크기 */
-    border-radius: 100%;
-    border: 1px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 1px 1px var(--main-color);
-    font-size: 4px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-#c-button a {
-    position: absolute;
-    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
-    width: 100%; /* 버튼 크기 꽉 채우기 */
-    height: 100%; /* 버튼 크기 꽉 채우기 */
-}
-#c-button:active {
-    box-shadow: 0px 0px var(--main-color);
-    transform: translate(1px, 1px);
-}
-#c-icon {
-    position: absolute;
-    top: 13%; /* 부모 요소의 세로 중앙 */
-    left: 10%; /* 부모 요소의 가로 중앙 */
-    width: 14px;
-    height: 14px;
-}
-/* d-button 스타일 및 위치 설정 */
-#d-button {
-    position: absolute;
-    top: 43%; /* 부모 요소의 세로 중앙 */
-    left: 86.1%; /* 부모 요소의 가로 중앙 */
-    --bg-color: #dddede;
-    --main-color: #010101;
-    width: 20px; /* 버튼 크기 */
-    height: 20px; /* 버튼 크기 */
-    border-radius: 100%;
-    border: 1px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 1px 1px var(--main-color);
-    font-size: 4px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-#d-button a {
-    position: absolute;
-    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
-    width: 100%; /* 버튼 크기 꽉 채우기 */
-    height: 100%; /* 버튼 크기 꽉 채우기 */
-}
-#d-button:active {
-    box-shadow: 0px 0px var(--main-color);
-    transform: translate(1px, 1px);
-}
-#d-icon {
-    position: absolute;
-    top: 13%; /* 부모 요소의 세로 중앙 */
-    left: 16.5%; /* 부모 요소의 가로 중앙 */
+    left: 16.4%; /* 부모 요소의 가로 중앙 */
     width: 14px;
     height: 14px;
 }
