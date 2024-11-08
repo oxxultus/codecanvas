@@ -61,12 +61,12 @@ function playHomeButtonSound() {
 
         // 소리 재생 시간 또는 기본 지연 시간 후 페이지 이동
         setTimeout(function() {
-            window.location.href = 'index.html'; // 소리 재생 후 페이지 이동
+            window.location.href = 'codecanvas.html'; // 소리 재생 후 페이지 이동
         }, (sound.duration || defaultDelay) * 1000);
     } else {
         // 소리가 꺼져있을 때 기본 지연 시간 후 페이지 이동
         setTimeout(function() {
-            window.location.href = 'index.html';
+            window.location.href = 'codecanvas.html';
         }, defaultDelay * 1000);
     }
 }
