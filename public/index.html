@@ -16,7 +16,7 @@
 <div class="console-item bounce-in-top">
     <div class="console-img">
         <div class="display-img-frame">
-            <img id="display-img" src="/src/images/index/study.gif" alt="">
+            <img id="display-img" src="/src/images/index/study.gif" alt="display-img" oncontextmenu="return false;">
         </div>
       <img src="../src/images/index/console.png" alt="console" height="300" oncontextmenu="return false;">
         <button id="home-button" onclick="playHomeButtonSound()">
@@ -50,6 +50,16 @@
         <button id="right-big-button" onclick="playSoundButton()">
         </button>
 
+        <button id="y-button" onclick="playSoundButton()">
+            <svg id="y-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M58 45.4C47.8 31 27.8 27.7 13.4 38S-4.3 68.2 6 82.6L160 298.3 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-149.7L378 82.6c10.3-14.4 6.9-34.4-7.4-44.6S336.2 31 326 45.4L192 232.9 58 45.4z"/>
+            </svg>
+        </button>
+        <button id="x-button" onclick="playSoundButton()">
+            <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/>
+            </svg>
+        </button>
         <button id="a-button" onclick="playSoundButton()">
             <svg id="a-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <path d="M221.5 51.7C216.6 39.8 204.9 32 192 32s-24.6 7.8-29.5 19.7l-120 288-40 96c-6.8 16.3 .9 35 17.2 41.8s35-.9 41.8-17.2L93.3 384l197.3 0 31.8 76.3c6.8 16.3 25.5 24 41.8 17.2s24-25.5 17.2-41.8l-40-96-120-288zM264 320l-144 0 72-172.8L264 320z"/>
@@ -58,16 +68,6 @@
         <button id="b-button" onclick="playSoundButton()">
             <svg id="b-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                 <path d="M64 32C28.7 32 0 60.7 0 96L0 256 0 416c0 35.3 28.7 64 64 64l128 0c70.7 0 128-57.3 128-128c0-46.5-24.8-87.3-62-109.7c18.7-22.3 30-51 30-82.3c0-70.7-57.3-128-128-128L64 32zm96 192l-96 0L64 96l96 0c35.3 0 64 28.7 64 64s-28.7 64-64 64zM64 288l96 0 32 0c35.3 0 64 28.7 64 64s-28.7 64-64 64L64 416l0-128z"/>
-            </svg>
-        </button>
-        <button id="c-button" onclick="playSoundButton()">
-            <svg id="c-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path d="M329.1 142.9c-62.5-62.5-155.8-62.5-218.3 0s-62.5 163.8 0 226.3s155.8 62.5 218.3 0c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3c-87.5 87.5-221.3 87.5-308.8 0s-87.5-229.3 0-316.8s221.3-87.5 308.8 0c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"/>
-            </svg>
-        </button>
-        <button id="d-button" onclick="playSoundButton()">
-            <svg id="d-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path d="M0 96C0 60.7 28.7 32 64 32l96 0c123.7 0 224 100.3 224 224s-100.3 224-224 224l-96 0c-35.3 0-64-28.7-64-64L0 96zm160 0L64 96l0 320 96 0c88.4 0 160-71.6 160-160s-71.6-160-160-160z"/>
             </svg>
         </button>
     </div>
