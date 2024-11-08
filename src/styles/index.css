@@ -151,7 +151,7 @@
 /* angle-left-button 스타일 및 위치 설정 */
 #home-button {
     position: absolute;
-        top: 78.2%; /* 부모 요소의 세로 중앙 */
+    top: 78.2%; /* 부모 요소의 세로 중앙 */
     left: 47%; /* 부모 요소의 가로 중앙 */
     --bg-color: #dddede;
     --main-color: #010101;
