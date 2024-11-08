@@ -37,9 +37,11 @@ section {
     /*border: solid white;*/
     color: white;
 
-    --card-bg-color: #1c1c25;
-    --card-box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.71),
-    -10px -10px 60px rgba(0, 0, 0, 0.71);
+    --card-bg-color: rgb(28, 28, 37);
+    --card-box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.71),
+    -10px -10px 50px rgba(0, 0, 0, 0.71);
+    /*--card-bg-color: lightgrey;*/
+    /*--card-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;*/
 }
 
 /* Footer */
@@ -86,19 +88,26 @@ footer {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-
     padding: 2px;
 
-    background-color: #98532a;
-    border-radius: 9px;
+    border-radius: 15px;
 
-    color: white;
+    color: rgb(253, 253, 253);
+    background: #1c1c25;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.71),
+    -10px -10px 50px rgba(0, 0, 0, 0.71);;
+    border: rgb(24, 24, 32) solid 1px;
+    transition: all .3s;
+}
+.tab-container:hover {
+    margin-top: 20px;
+    z-index: 10;
 }
 .indicator {
     content: "";
     width: 130px;
     height: 28px;
-    background: #2f2f39;
+    background: #1d347c;
     position: absolute;
     top: 2px;
     left: 2px;
@@ -107,7 +116,7 @@ footer {
     -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12),
     0px 3px 1px rgba(0, 0, 0, 0.04);
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
-    border-radius: 7px;
+    border-radius: 12px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
@@ -172,8 +181,12 @@ footer {
     width: 340px;
     height: 350px;
     border-radius: 15px;
-    background: #ee8343;
+    background: #2a4ab2;
     box-shadow: var(--card-box-shadow);
+    transition: all .3s;
+}
+#profile:hover {
+    margin-top: -10px;
 }
 #profile_frame {
     position: absolute;
@@ -186,6 +199,21 @@ footer {
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
+#profile-title-icon {
+    position: absolute;
+    top: 4.4%; /* 부모 요소의 세로 중앙 */
+    left: 10%; /* 부모 요소의 가로 중앙 */
+    width: 32px;
+    height: 32px;
+    color: rgba(211, 211, 211, 0.7);
+}
+#profile-title{
+    position: absolute;
+    top: -0.75%; /* 부모 요소의 세로 중앙 */
+    left: 23%; /* 부모 요소의 가로 중앙 */
+    font-size: 20px;
+    color: rgba(211, 211, 211, 0.7);
+}
 /* sns 구성 */
 #social {
     position: absolute;
@@ -197,49 +225,53 @@ footer {
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
+    transition: all .3s;
+}
+#social:hover {
+    margin-top: -10px;
 }
 #first_social_frame {
     position: absolute;
     top: 3%;
     left: 4%;
     display: flex;
-    width: 150px;
+    width: 151px;
     height: 180px;
     border-radius: 15px;
-    background: #16161d;
+    background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #second_social_frame {
     position: absolute;
     top: 3%;
-    left: 51%;
+    left: 51.5%;
     display: flex;
-    width: 150px;
+    width: 151px;
     height: 180px;
     border-radius: 15px;
-    background: #16161d;
+    background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #third_social_frame {
     position: absolute;
-    top: 50%;
+    top: 51%;
     left: 4%;
     display: flex;
-    width: 150px;
+    width: 151px;
     height: 180px;
     border-radius: 15px;
-    background: #16161d;
+    background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #fourth_social_frame {
     position: absolute;
-    top: 50%;
-    left: 51%;
+    top: 51%;
+    left: 51.5%;
     display: flex;
-    width: 150px;
+    width: 151px;
     height: 180px;
     border-radius: 15px;
-    background: #16161d;
+    background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 /* portfolio 구성 */
@@ -253,6 +285,10 @@ footer {
      border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
+    transition: all .3s;
+}
+#portfolio:hover {
+    margin-top: -10px;
 }
 #portfolio_title_frame {
     position: absolute;
@@ -276,6 +312,95 @@ footer {
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
+#portfolio_title_frame_icon{
+    position: absolute;
+    top: 20%; /* 부모 요소의 세로 중앙 */
+    left: 6%; /* 부모 요소의 가로 중앙 */
+    width: 30px;
+    height: 30px;
+    color: rgba(234, 177, 54, 0.7);
+}
+#portfolio_title_frame_icon_text{
+    position: absolute;
+    top: -27%; /* 부모 요소의 세로 중앙 */
+    left: 20%; /* 부모 요소의 가로 중앙 */
+    font-size: 20px;
+    color: rgba(211, 211, 211, 0.54);
+}
+/* portfolio-angle-left-button 스타일 및 위치 설정 */
+#portfolio-angle-left-button {
+    position: absolute;
+    top: 4%; /* 부모 요소의 세로 중앙 */
+    left: 78.8%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #1c1c25;
+    --main-color: #000000;
+    width: 35px; /* 버튼 크기 */
+    height: 35px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#portfolio-angle-left-button a {
+    position: absolute;
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+#portfolio-angle-left-button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
+}
+#portfolio-angle-left-icon {
+    position: absolute;
+    top: -28%; /* 부모 요소의 세로 중앙 */
+    left: -30%; /* 부모 요소의 가로 중앙 */
+    width: 50px;
+    height: 50px;
+}
+/* portfolio-angle-right-button 스타일 및 위치 설정 */
+#portfolio-angle-right-button {
+    position: absolute;
+    top: 4%; /* 부모 요소의 세로 중앙 */
+    left: 90%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #1c1c25;
+    --main-color: #010101;
+    width: 35px; /* 버튼 크기 */
+    height: 35px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#portfolio-angle-right-button a {
+    position: absolute;
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+#portfolio-angle-right-button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
+}
+#portfolio-angle-right-icon {
+    position: absolute;
+    top: -28%; /* 부모 요소의 세로 중앙 */
+    left: -20%; /* 부모 요소의 가로 중앙 */
+    width: 50px;
+    height: 50px;
+}
 /* projects 구성 */
 #projects {
     position: absolute;
@@ -286,9 +411,14 @@ footer {
     height: 400px;
     border-radius: 15px;
     background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.71),
+    -5px -5px 50px rgba(0, 0, 0, 0.71);
+    transition: all .3s;
 }
-#project_title_frame {
+#projects:hover {
+    margin-top: -10px;
+}
+#projects_title_frame {
     position: absolute;
     top: 85%;
     left: 2.6%;
@@ -299,7 +429,7 @@ footer {
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
-#project_img_frame {
+#projects_img_frame {
     position: absolute;
     top: 3%;
     left: 2.6%;
@@ -310,7 +440,7 @@ footer {
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
-#project_explain_frame{
+#projects_explain_frame{
     position: absolute;
     top: 3%;
     left: 60%;
@@ -320,6 +450,95 @@ footer {
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
+}
+#projects_title_frame_icon{
+    position: absolute;
+    top: 20%; /* 부모 요소의 세로 중앙 */
+    left: 6%; /* 부모 요소의 가로 중앙 */
+    width: 30px;
+    height: 30px;
+    color: rgba(234, 177, 54, 0.7);
+}
+#projects_title_frame_icon_text{
+    position: absolute;
+    top: -27%; /* 부모 요소의 세로 중앙 */
+    left: 20%; /* 부모 요소의 가로 중앙 */
+    font-size: 20px;
+    color: rgba(211, 211, 211, 0.54);
+}
+/* projects-angle-left-button 스타일 및 위치 설정 */
+#projects-angle-left-button {
+    position: absolute;
+    top: 87%; /* 부모 요소의 세로 중앙 */
+    left: 78.8%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #1c1c25;
+    --main-color: #000000;
+    width: 35px; /* 버튼 크기 */
+    height: 35px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#projects-angle-left-button a {
+    position: absolute;
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+#projects-angle-left-button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
+}
+#projects-angle-left-icon {
+    position: absolute;
+    top: -28%; /* 부모 요소의 세로 중앙 */
+    left: -30%; /* 부모 요소의 가로 중앙 */
+    width: 50px;
+    height: 50px;
+}
+/* projects-angle-right-button 스타일 및 위치 설정 */
+#projects-angle-right-button {
+    position: absolute;
+    top: 87%; /* 부모 요소의 세로 중앙 */
+    left: 90%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #1c1c25;
+    --main-color: #010101;
+    width: 35px; /* 버튼 크기 */
+    height: 35px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#projects-angle-right-button a {
+    position: absolute;
+    display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+    width: 100%; /* 버튼 크기 꽉 채우기 */
+    height: 100%; /* 버튼 크기 꽉 채우기 */
+}
+#projects-angle-right-button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
+}
+#projects-angle-right-icon {
+    position: absolute;
+    top: -28%; /* 부모 요소의 세로 중앙 */
+    left: -20%; /* 부모 요소의 가로 중앙 */
+    width: 50px;
+    height: 50px;
 }
 /* 기술 스택 구성*/
 #tech-stack {
@@ -332,113 +551,73 @@ footer {
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
+    transition: all .3s;
+}
+#tech-stack:hover {
+    margin-top: -10px;
 }
 #tech_stack_frame_1 {
     position: absolute;
-    top: 3%; /* 화면의 50% 아래에 위치 */
+    top: 3%;
     left: 3%;
     display: flex;
-    width: 90px;
-    height: 160px;
+    width: 145px;
+    height: 155px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #tech_stack_frame_2 {
     position: absolute;
-    top: 3%; /* 화면의 50% 아래에 위치 */
-    left: 22%;
+    top: 3%;
+    left: 35.8%;
     display: flex;
-    width: 90px;
-    height: 160px;
+    width: 145px;
+    height: 155px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #tech_stack_frame_3 {
     position: absolute;
-    top: 3%; /* 화면의 50% 아래에 위치 */
-    left: 41%;
+    top: 3%;
+    left: 68.5%;
     display: flex;
-    width: 90px;
-    height: 160px;
+    width: 145px;
+    height: 155px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #tech_stack_frame_4 {
     position: absolute;
-    top: 3%; /* 화면의 50% 아래에 위치 */
-    left: 60%;
+    top: 53%;
+    left: 3%;
     display: flex;
-    width: 90px;
-    height: 160px;
+    width: 145px;
+    height: 155px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #tech_stack_frame_5 {
     position: absolute;
-    top: 3%; /* 화면의 50% 아래에 위치 */
-    left: 79%;
+    top: 53%;
+    left: 35.8%;
     display: flex;
-    width: 90px;
-    height: 160px;
+    width: 145px;
+    height: 155px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #tech_stack_frame_6 {
     position: absolute;
-    top: 51%;
-    left: 3%;
+    top: 53%;
+    left: 68.5%;
     display: flex;
-    width: 90px;
-    height: 160px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#tech_stack_frame_7 {
-    position: absolute;
-    top: 51%;
-    left: 22%;
-    display: flex;
-    width: 90px;
-    height: 160px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#tech_stack_frame_8 {
-    position: absolute;
-    top: 51%;
-    left: 41%;
-    display: flex;
-    width: 90px;
-    height: 160px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#tech_stack_frame_9 {
-    position: absolute;
-    top: 51%;
-    left: 60%;
-    display: flex;
-    width: 90px;
-    height: 160px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#tech_stack_frame_10 {
-    position: absolute;
-    top: 51%;
-    left: 79%;
-    display: flex;
-    width: 90px;
-    height: 160px;
+    width: 145px;
+    height: 155px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
@@ -454,6 +633,10 @@ footer {
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
+    transition: all .3s;
+}
+#certificate:hover {
+    margin-top: -10px;
 }
 #certificate_frame_1 {
     position: absolute;
@@ -461,91 +644,98 @@ footer {
     left: 2.6%;
     display: flex;
     width: 475px;
-    height: 40px;
+    height: 85px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #certificate_frame_2 {
     position: absolute;
-    top: 15%;
+    top: 27%;
     left: 2.6%;
     display: flex;
     width: 475px;
-    height: 40px;
+    height: 85px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #certificate_frame_3 {
     position: absolute;
-    top: 27%;
+    top: 51%;
     left: 2.6%;
     display: flex;
     width: 475px;
-    height: 40px;
+    height: 85px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
 #certificate_frame_4 {
     position: absolute;
-    top: 39%;
-    left: 2.6%;
-    display: flex;
-    width: 475px;
-    height: 40px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#certificate_frame_5 {
-    position: absolute;
-    top: 51%;
-    left: 2.6%;
-    display: flex;
-    width: 475px;
-    height: 40px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#certificate_frame_6 {
-    position: absolute;
-    top: 63%;
-    left: 2.6%;
-    display: flex;
-    width: 475px;
-    height: 40px;
-    border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
-}
-#certificate_frame_7 {
-    position: absolute;
     top: 75%;
     left: 2.6%;
     display: flex;
     width: 475px;
-    height: 40px;
+    height: 85px;
     border-radius: 15px;
     background: var(--card-bg-color);
     box-shadow: var(--card-box-shadow);
 }
-#certificate_frame_8 {
+#rock-certificate {
     position: absolute;
-    top: 87%;
-    left: 2.6%;
+    top: 0%;
+    left: 0%;
     display: flex;
-    width: 475px;
-    height: 40px;
+    width: 500px;
+    height: 400px;
     border-radius: 15px;
-    background: var(--card-bg-color);
-    box-shadow: var(--card-box-shadow);
+    background: rgba(28, 28, 37, 0.39);
+    filter: blur(1px);
+}
+#showButton {
+    position: absolute;
+    top: 43%; /* 부모 요소의 세로 중앙 */
+    left: 50%; /* 부모 요소의 가로 중앙 */
+    --bg-color: #dddede;
+    --main-color: #010101;
+    width: 50px; /* 버튼 크기 */
+    height: 50px; /* 버튼 크기 */
+    border-radius: 100%;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px var(--main-color);
+    font-size: 4px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#showButton a {
+     position: absolute;
+     display: block; /* a 태그를 블록 요소로 만들어 클릭 가능하게 */
+     width: 100%; /* 버튼 크기 꽉 채우기 */
+     height: 100%; /* 버튼 크기 꽉 채우기 */
+ }
+#showButton:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(1px, 1px);
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden; /* 사라지면서 화면에서 보이지 않게 함 */
+    }
+}
+.hidden {
+    animation: fadeOut 1s forwards; /* 애니메이션 실행 후, 요소가 보이지 않게 처리 */
+}
 /* 에니메이션 설정하는 부분 ================================= */
-/* 텍스트가 천천히 선명해진다*/
+/* 텍스트가 천천히 선명해진다 */
 .text-focus-in {
     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -574,10 +764,10 @@ footer {
         opacity: 1;
     }
 }
-/* 오른쪽에서 중앙으로 밝아지면서 들어오는 에니메이션 */
-.fade-in-right {
-    -webkit-animation: fade-in-right 1s ease-in-out both;
-    animation: fade-in-right 1s ease-in-out both;
+/* 오른쪽에서 중앙으로 밝아지면서 들어오는 에니메이션 1번 */
+.first-fade-in-right {
+    -webkit-animation: first-fade-in-right 1s ease-in-out both;
+    animation: first-fade-in-right 1s ease-in-out both;
 }
 @-webkit-keyframes fade-in-right {
     0% {
@@ -591,7 +781,36 @@ footer {
         opacity: 1;
     }
 }
-@keyframes fade-in-right {
+@keyframes first-fade-in-right {
+    0% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* 오른쪽에서 중앙으로 밝아지면서 들어오는 에니메이션 2번 */
+.second-fade-in-right {
+    -webkit-animation: second-fade-in-right-right 1.3s ease-in-out both;
+    animation: second-fade-in-right 1.3s ease-in-out both;
+}
+@-webkit-keyframes second-fade-in-right {
+    0% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes second-fade-in-right {
     0% {
         -webkit-transform: translateX(50px);
         transform: translateX(50px);
@@ -662,11 +881,11 @@ footer {
     }
 }
 /* 우측에서 중앙으로 밝아지면서 들어오는 에니메이션 */
-.fade-in-left {
-    -webkit-animation: fade-in-left 1s ease-in-out both;
-    animation: fade-in-left 1s ease-in-out both;
+.first-fade-in-left {
+    -webkit-animation: first-fade-in-left 1s ease-in-out both;
+    animation: first-fade-in-left 1s ease-in-out both;
 }
-@-webkit-keyframes fade-in-left {
+@-webkit-keyframes first-fade-in-left {
     0% {
         -webkit-transform: translateX(-50px);
         transform: translateX(-50px);
@@ -678,7 +897,35 @@ footer {
         opacity: 1;
     }
 }
-@keyframes fade-in-left {
+@keyframes first-fade-in-left {
+    0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.second-fade-in-left {
+    -webkit-animation: second-fade-in-left 1.3s ease-in-out both;
+    animation: second-fade-in-left 1.3s ease-in-out both;
+}
+@-webkit-keyframes second-fade-in-left {
+    0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes second-fade-in-left {
     0% {
         -webkit-transform: translateX(-50px);
         transform: translateX(-50px);
