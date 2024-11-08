@@ -1,5 +1,6 @@
 let isSoundOn = true;  // 소리 상태 (true: 켜짐, false: 꺼짐)
 
+// 소리 상태 토글 (켜짐 / 꺼짐)
 function toggleSound() {
     const sounds = document.querySelectorAll("audio");
 
@@ -32,22 +33,16 @@ function toggleSound() {
     }
 }
 
-// 클릭 버튼 소리 계속 실행
-document.getElementById('click-button-sound').play();
-
-// 버튼 1의 소리 재생
+// 클릭 버튼 소리 계속 실행 (소리가 켜졌을 때만)
 function playSoundButton() {
     const sound = document.getElementById("click-button-sound");
     if (isSoundOn) {  // 소리가 켜져 있을 때만 재생
-        if (!sound.paused && !sound.ended) {
-            sound.pause(); // 현재 소리 멈추기
-            sound.currentTime = 0; // 소리 시작 위치 초기화
-        }
-        sound.play(); // 새 소리 재생
+        sound.currentTime = 0; // 소리가 여러 번 클릭해도 처음부터 재생되도록
+        sound.play();
     }
 }
 
-// 버튼 2의 소리 재생 후 페이지 이동
+// 버튼 2의 소리 재생 후 페이지 이동 (소리가 켜져 있을 때만)
 function playHomeButtonSound() {
     const sound = document.getElementById("click-home-button-sound");
     const defaultDelay = 0.2; // 소리 무음 시 기본 지연 시간 (초)
